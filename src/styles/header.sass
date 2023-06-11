@@ -1,0 +1,68 @@
+.header
+  color: #FFFFFF
+  font-size: 15px
+  text-transform: uppercase
+  display: flex
+  align-items: center
+  justify-content: space-around
+  padding: 20px
+
+.header__logo-block
+  display: inline-flex
+  align-items: center
+  gap: 14px
+
+.header__logo-text
+  display: flex
+  flex-direction: column
+  gap: 5px
+
+.header__logo-upper-text
+  font-family: 'Roboto', sans-serif
+  font-weight: 100
+
+.header__button-shape-info
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  background-color: #302E5A
+  width: 140px
+  border-radius: 10px
+  height: 40px
+  font-size: 14px
+  @include mediaMobileOnly
+    width: 75px
+    font-size: 12px
+
+
+
+.header__button-shape-block
+  display: flex
+  gap: 14px
+
+.header__calendar-icon
+  display: none
+  @include mediaTabletUp
+    display: block
+  position: absolute
+  left: 10px
+
+
+.header__circle-icon
+  display: none
+  @include mediaTabletUp
+    display: block
+    position: absolute
+    left: 10px
+
+
+.header__arrow-icon
+  display: none
+  @include mediaTabletUp
+    display: block
+    position: absolute
+    left: 15px
+    top: 15px
+
+

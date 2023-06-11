@@ -1,0 +1,91 @@
+.sign-form
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 370px
+  //margin: 0 auto
+  padding: 50px 30px
+  border-radius: 10px
+  background-color: #303A53
+  @include mediaMobileOnly
+    width: 300px
+
+
+
+
+
+  .sign-form__container
+    margin-bottom: 20px
+
+  input[type="text"],
+  input[type="email"]
+    width: 248px
+    height: 51px
+    padding: 10px
+    color: #FFFFFF
+    border: 1px solid #ccc
+    border-radius: 4px
+    background-color: #272D3D
+
+  button
+    padding: 13px 43px
+    background-color: #FF3459
+    border-radius: 5px
+    width: 273px
+    height: 61px
+    color: #fff
+    cursor: pointer
+
+  .sign-form__input-field::placeholder
+    color: #D7D7D7
+
+  input[type="checkbox"]
+    display: none
+
+  input[type="checkbox"]:checked + label
+    color: #4252D1
+
+  .sign-form_agreement-text
+    font-weight: 500
+    font-size: 14px
+    margin-top: 20px
+    color:  rgba(255, 255, 255, 0.5)
+
+  .sign-form__errors
+    font-size: 0.8rem
+    text-align: center
+    color: #FF3459
+
+
+.sign-form_header
+  text-align: center
+  margin-bottom: 20px
+
+  p
+    font-size: 22px
+    color: #FFFFFF
+    font-weight: 600
+
+  span
+    font-size: 22px
+    color: #FF3459
+    font-weight: 600
+
+
+.sign-form__select-lang
+  padding: 8px 12px
+  border-radius: 4px
+  background-color: transparent
+  color:  rgba(255, 255, 255, 0.5)
+  font-size: 14px
+  width: 100%
+
+.sign-form__show-full-screen
+  display: none
+  @include mediaTabletUp
+    display: block
+
+.sign-form__show-mobile
+  display: none
+  @include mediaMobileOnly
+    display: block

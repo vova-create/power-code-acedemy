@@ -1,26 +1,36 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <TheHeader/>
+    <div class="items-to-group">
+      <InfoBlock/>
+      <SignForm class="sign-form__show-full-screen" />
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+
+import TheHeader from "@/components/TheHeader.vue";
+import InfoBlock from "@/components/InfoBlock.vue";
+import SignForm from "@/components/SignForm.vue";
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    TheHeader,
+    InfoBlock,
+    SignForm
+  },
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass">
+*
+  margin: 0
+  padding: 0
+#app
+  height: 100vh
+  font-family: 'Roboto', sans-serif
+  background-color: #272D3D
+
 </style>
