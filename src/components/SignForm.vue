@@ -1,32 +1,34 @@
 <template>
   <div>
+    <div>
+      <select class="sign-form__select-lang" v-model="form.selectedCountry" @change="updatePhonePrefix">
+        <option value="default">Выбирите страну</option>
+        <option  value="ua">Ukraine</option>
+        <option value="pl">Poland</option>
+      </select>
+    </div>
     <form @submit.prevent="submit" class="sign-form">
-      <div class="sign-form_header">
-<p>Запишитесь <span>бесплатно</span> <br/>и получите подарок</p>
-      </div>
-      <div class="sign-form__container">
-        <input class="sign-form__input-field" type="text" id="name" v-model="form.name" placeholder="Ваше имя и фамилия">
-        <div class="sign-form__errors">{{errors.name}}</div>
-      </div>
-      <div class="sign-form__container">
-        <div>
-          <select class="sign-form__select-lang" v-model="form.selectedCountry" @change="updatePhonePrefix">
-            <option value="default">Выбирите страну</option>
-            <option  value="ua">Ukraine</option>
-            <option value="pl">Poland</option>
-          </select>
+      <div class="sign-form__box">
+        <div class="sign-form_header">
+          <p>Запишитесь <span>бесплатно</span> <br/>и получите подарок</p>
         </div>
-        <input class="sign-form__input-field" type="text" v-model="form.phone" placeholder="Ваш номер телефона">
-        <div class="sign-form__errors">{{errors.phone}}</div>
+        <div class="sign-form__container">
+          <input class="sign-form__input-field" type="text" id="name" v-model="form.name" placeholder="Ваше имя и фамилия">
+          <div class="sign-form__errors">{{errors.name}}</div>
+        </div>
+        <div class="sign-form__container">
+          <input class="sign-form__input-field" type="text" v-model="form.phone" placeholder="Ваш номер телефона">
+          <div class="sign-form__errors">{{errors.phone}}</div>
+        </div>
+        <div class="sign-form__container">
+          <input class="sign-form__input-field" type="text" id="email" v-model="form.email" placeholder="Ваш email">
+          <div class="sign-form__errors">{{errors.email}}</div>
+        </div>
+        <button type="submit">Записаться бесплатно</button>
+        <input class="test" type="checkbox" id="agreement">
+        <label class="sign-form_agreement-text" for="agreement">Нажимая на кнопку я согашаюсь <br/>
+        <u>с политикой конфидециальности</u> </label>
       </div>
-      <div class="sign-form__container">
-        <input class="sign-form__input-field" type="text" id="email" v-model="form.email" placeholder="Ваш email">
-        <div class="sign-form__errors">{{errors.email}}</div>
-      </div>
-      <button type="submit">Записаться бесплатно</button>
-      <input type="checkbox" id="agreement">
-      <label class="sign-form_agreement-text" for="agreement">Нажимая на кнопку я согашаюсь <br/>
-        с политикой конфидециальности</label>
     </form>
   </div>
 </template>
@@ -62,7 +64,6 @@ export default {
     },
 
     isValidPhoneNumber(phone) {
-      // Phone number validation using regular expression
       const phoneRegex = /^\+[1-9]\d{1,14}$/;
       return phoneRegex.test(phone);
     },
@@ -85,16 +86,13 @@ export default {
         this.errors.phone = 'Пожалуйста, введите ваш номер правильно';
       }
 
-      for( let key in this.errors) {
-        if(this.errors[key] === ''){
+        if(this.errors['phone'] === '' && this.errors['name'] === '' && this.errors['email'] === ''){
           this.canBeSent = true
-        }
       }
-      console.log(this.canBeSent)
       if(this.canBeSent) {
         const subject = 'Бесплатная запись';
         const body = `Name: ${this.form.name}\nEmail: ${this.form.email}\nPhone: ${this.form.phone}`;
-        const mailtoUrl = `mailto:oleniev9@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        const mailtoUrl = `mailto:designer.web.studio.rgb@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         window.location.href = mailtoUrl;
       }
     },

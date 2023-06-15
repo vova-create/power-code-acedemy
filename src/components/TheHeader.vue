@@ -1,10 +1,11 @@
 <template>
 <div class="header">
   <div class="header__logo-block">
-    <img src="@/assets/icons/logo/shape.png" height="56" width="50"/>
+    <img class="header__logo-image" src="@/assets/icons/logo/shape.png" height="50" width="56"/>
     <div class="header__logo-text">
       <div class="header__logo-upper-text">powercode</div>
-      <img src="@/assets/icons/logo/academy.png" height="15" width="97"/></div>
+      <img class="header__logo-lower-image" src="@/assets/icons/logo/academy.png" height="15" width="118"/>
+    </div>
   </div>
   <div class="header__button-shape-block">
     <div class="header__button-shape-info">

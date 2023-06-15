@@ -4,8 +4,8 @@
     <div class="items-to-group">
       <InfoBlock/>
       <SignForm class="sign-form__show-full-screen" />
-    </div>
   </div>
+    </div>
 </template>
 
 <script>

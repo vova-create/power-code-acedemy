@@ -2,42 +2,70 @@
   display: flex
   flex-direction: column
   align-items: center
-  width: 370px
-  //margin: 0 auto
-  padding: 50px 30px
-  border-radius: 10px
-  background-color: #303A53
-  @include mediaMobileOnly
-    width: 300px
-
+  justify-content: center
+  width: 328px
+  height: 451px
+  @include mediaMobileLargeUpPlus
+    height: 474px
+    width: 366px
 
 
 
 
   .sign-form__container
-    margin-bottom: 20px
+    //margin-bottom: 20px
+
+  .sign-form__box
+    background-color: #303A53
+    display: flex
+    flex-direction: column
+    align-items: center
+    border-radius: 10px
+    gap: 14px
+    padding: 40px 20px
+    position: relative
+    @include mediaMobileLargeUpPlus
+      padding: 50px 58px
+
 
   input[type="text"],
   input[type="email"]
-    width: 248px
-    height: 51px
-    padding: 10px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    gap: 10px
+    width: 286px
+    height: 46px
+    //padding: 10px
     color: #FFFFFF
-    border: 1px solid #ccc
+    border: none
     border-radius: 4px
     background-color: #272D3D
+    @include mediaMobileLargeUpPlus
+      width: 248px
+      height: 51px
+
 
   button
     padding: 13px 43px
-    background-color: #FF3459
+    background: #0048FF
+    border: none
     border-radius: 5px
-    width: 273px
-    height: 61px
+    width: 248px
+    height: 51px
     color: #fff
     cursor: pointer
+    @include mediaMobileLargeUpPlus
+      background-color: #FF3459
+
+
 
   .sign-form__input-field::placeholder
+    font-weight: 400
+    padding: 13px 14px 22px
     color: #D7D7D7
+    opacity: 0.7
 
   input[type="checkbox"]
     display: none
@@ -46,10 +74,13 @@
     color: #4252D1
 
   .sign-form_agreement-text
+    color: #d71d1d
+    border-bottom:  rgba(255, 255, 255, 0.5)
     font-weight: 500
-    font-size: 14px
     margin-top: 20px
-    color:  rgba(255, 255, 255, 0.5)
+    font-size: 12px
+    line-height: 149%
+    color: rgba(255, 255, 255, 0.5)
 
   .sign-form__errors
     font-size: 0.8rem
@@ -59,7 +90,8 @@
 
 .sign-form_header
   text-align: center
-  margin-bottom: 20px
+  line-height: 26px
+  //margin-bottom: 20px
 
   p
     font-size: 22px
@@ -67,18 +99,25 @@
     font-weight: 600
 
   span
-    font-size: 22px
+    font-size: 20px
     color: #FF3459
     font-weight: 600
 
 
 .sign-form__select-lang
-  padding: 8px 12px
+  display: none
+  position: relative
   border-radius: 4px
   background-color: transparent
   color:  rgba(255, 255, 255, 0.5)
   font-size: 14px
-  width: 100%
+  width: 50px
+  height: 50px
+  left: 5px
+  top: 229px
+  z-index: 2
+  @include mediaMobileLargeUpPlus
+    display: block
 
 .sign-form__show-full-screen
   display: none
