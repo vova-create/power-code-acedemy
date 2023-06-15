@@ -6,20 +6,51 @@
   align-items: center
   justify-content: space-around
   padding: 20px
+  //gap: 10px
+  //@include mediaMobileLargeUpPlus
+  //  gap: 5px
+
 
 .header__logo-block
   display: inline-flex
   align-items: center
-  gap: 14px
+  margin-right: 10px
+  gap: 5px
+  @include mediaMobileLargeUpPlus
+    gap: 14px
+    margin-right: 0
+
+
+.header__logo-image
+  width: 28px
+  height: 32px
+  @include mediaMobileLargeUpPlus
+    width: 55px
+    height: 55px
+
 
 .header__logo-text
   display: flex
   flex-direction: column
-  gap: 5px
+  @include mediaMobileLargeUpPlus
+    gap: 5px
 
 .header__logo-upper-text
+  font-size: 11px
   font-family: 'Roboto', sans-serif
   font-weight: 100
+  @include mediaMobileLargeUpPlus
+    letter-spacing: 0.1rem
+    font-size: 17px
+
+
+.header__logo-lower-image
+  width: 66px
+  height: 9px
+  @include mediaMobileLargeUpPlus
+    width: 118px
+    height: 15px
+
 
 .header__button-shape-info
   display: flex
@@ -27,13 +58,16 @@
   align-items: center
   position: relative
   background-color: #302E5A
-  width: 140px
   border-radius: 10px
-  height: 40px
-  font-size: 14px
-  @include mediaMobileOnly
-    width: 75px
+  width: 88px
+  height: 24px
+  font-weight: 600
+  line-height: 8px
+  font-size: 9px
+  @include mediaTabletUp
+    width: 141px
     font-size: 12px
+    height: 40px
 
 
 
@@ -42,27 +76,33 @@
   gap: 14px
 
 .header__calendar-icon
-  display: none
-  @include mediaTabletUp
-    display: block
+  display: block
   position: absolute
-  left: 10px
-
-
-.header__circle-icon
-  display: none
+  width: 11px
+  height: 10px
+  left: 1px
   @include mediaTabletUp
-    display: block
-    position: absolute
     left: 10px
 
 
-.header__arrow-icon
-  display: none
+.header__circle-icon
+  display: block
+  position: absolute
+  left: 2px
   @include mediaTabletUp
-    display: block
-    position: absolute
-    left: 15px
+    left: 23px
+
+
+
+
+.header__arrow-icon
+  display: block
+  position: absolute
+  left: 7px
+  @include mediaTabletUp
+    left: 28px
     top: 15px
+
+
 
 

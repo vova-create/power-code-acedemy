@@ -19,14 +19,14 @@
         <img src="@/assets/icons/man-and-laptop.png" height="44" width="37"/>
         <div class="info-block__details-text">
           <p class="info-block__details-name">Кирилл <span class="info-block__details-family-name">КАСАТОНОВ</span></p>
-          <p class="info-block__details-text-descriptions">6 лет коммерческого опыта с такими  компаниями как Mercedes-Benz и другими крупными корпорациями</p>
+          <p class="info-block__details-text-descriptions">6 лет коммерческого опыта с такими  компаниями как <br/> Mercedes-Benz и другими крупными корпорациями</p>
         </div>
       </div>
       <div class="info-block__details-item">
         <img src="@/assets/icons/gift.png" height="39" width="38"/>
         <div class="info-block__details-text">
           <p class="info-block__details-name">Бонус за регистрацию</p>
-          <p class="info-block__details-text-descriptions">PDF-файл "5 преимуществ профессии фронтенд разработчика" </p>
+          <p class="info-block__details-text-descriptions">PDF-файл "5 преимуществ <br> профессии фронтенд разработчика" </p>
         </div>
       </div>
     </div>
